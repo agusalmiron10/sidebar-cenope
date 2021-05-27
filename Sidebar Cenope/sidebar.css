@@ -79,6 +79,7 @@ body {
   background: #333333;
   /*transition:all 300ms linear;*/
   z-index: 1;
+  overflow: scroll;
 }
 
 .sidebar-search.active {
@@ -145,9 +146,9 @@ body {
   height: 5vh;
 }
 #title-conduccion h3{
-  font-size: 25px;
+  font-size: 23px;
   position: absolute;
-  top: 465px;
+  top: 477px;
 }
 
 .sidebar-search .scroll_A::-webkit-scrollbar {
