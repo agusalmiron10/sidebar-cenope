@@ -1,0 +1,456 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 60px;
+  background-color: rgb(17, 17, 17);
+  transition: 0.5s;
+  overflow-x: hidden;
+  padding-top: 60px;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 0;
+}
+.sidebar ul {
+  position: absolute;
+  top: 0px;
+}
+.sidebar li {
+  list-style: none;
+  margin-top: 30px;
+  margin-left: -16px;
+}
+.sidebar li a {
+  padding: 20px 8px 8px 0px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  transition: 0.5s;
+  transition-property: color;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar li a .pulsado {
+  color: #f1f1f1;
+}
+
+.sidebar li a .fa-caret-left {
+  padding-left: 4px;
+  color: rgb(255, 255, 255);
+  display: none;
+}
+.sidebar li a #triangle2 {
+  position: absolute;
+  left: 47px;
+  top: 152px;
+  padding-left: 4px;
+  color: rgb(255, 255, 255);
+}
+
+.sidebar li a #triangle4 {
+  position: absolute;
+  left: 47px;
+  top: 246px;
+  padding-left: 4px;
+  color: rgb(255, 255, 255);
+}
+
+.sidebar li a #triangle3 {
+  position: absolute;
+  left: 47px;
+  top: 55px;
+  padding-left: 4px;
+  color: rgb(255, 255, 255);
+}
+
+/*sub menu*/
+.sidebar-search {
+  position: absolute;
+  left: -290px;
+  width: 290px;
+  top: 66px;
+  height: 100%;
+  background: #333333;
+  /*transition:all 300ms linear;*/
+  z-index: 1;
+}
+
+.sidebar-search.active {
+  left: 60px;
+}
+
+.sidebar-search ul {
+  list-style: none;
+  margin-top: 0px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+/*Elementos li*/
+.sidebar-search ul li {
+  padding: 20px 14px 21px 10px;
+  transition: all 300ms linear;
+}
+
+
+
+
+.sidebar-search ul #uni-militares {
+  border-left: solid 6px RGB(174, 201, 11);
+}
+.sidebar-search ul #universidades {
+  border-left: solid 6px RGB(238, 125, 0);
+}
+.sidebar-search ul #limite-arg {
+  border-left: solid 6px RGB(64, 191, 239);
+}
+
+.sidebar-search ul li:hover {
+  background-color: rgb(131, 131, 131);
+}
+
+.sidebar-search ul li h4 {
+  color: rgb(255, 255, 255);
+}
+
+.sidebar-search ul li p {
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+}
+
+.sidebar-search ul li a {
+  text-decoration: none;
+}
+
+#title-estructura{
+  background-color: #2f4491;
+  color: #ffffff;
+  line-height: 5vh;
+  height: 5vh;
+
+}
+#title-estructura h3{
+  line-height: 0vh;
+  margin-left: 0px;
+}
+
+#title-conduccion{
+  background-color: #2f4491;
+  color: #ffffff;
+  height: 5vh;
+}
+#title-conduccion h3{
+  font-size: 25px;
+  position: absolute;
+  top: 465px;
+}
+
+.sidebar-search .scroll_A::-webkit-scrollbar {
+	width: 7px;
+}
+
+.sidebar-search .scroll_A::-webkit-scrollbar-thumb {
+	background: #ff9d00;
+	border-radius: 5px;
+}
+
+
+.sidebar-search .scroll_B::-webkit-scrollbar {
+	width: 7px;
+}
+
+.sidebar-search .scroll_B::-webkit-scrollbar-thumb {
+	background: #ff9d00;
+	border-radius: 5px;
+}
+
+
+/*sub-sidebar 2 - estilos - unidades militares*/
+
+#sub-menu-search2 {
+  display: none;
+  margin-left: 0px;
+}
+
+#sub-menu-search2 ul li {
+  height: 66px;
+  border-bottom: 1px solid rgb(144, 144, 144);
+}
+#sub-menu-search2 #logo {
+  width: 35px;
+}
+
+#sub-menu-search2 ul li a p {
+  position: relative;
+  top: -28px;
+  left: 34px;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+#sub-menu-search2 #uni-mil-title {
+  background-color: RGB(174, 201, 11);
+  height: 50px;
+}
+
+#sub-menu-search2 #uni-mil-title #Item1 {
+  position: absolute;
+  top: 12px;
+}
+#sub-menu-search2 #uni-mil-title #Item1 h4 {
+  font-size: 20px;
+}
+#sub-menu-search2 #uni-mil-title #Item1 #crossicon {
+  position: absolute;
+  left: 205px;
+  top: 3px;
+}
+
+.active4 {
+  background-color: rgb(131, 131, 131);
+  border-left: 5px solid RGB(174, 201, 11);
+}
+
+/*sub-sidebar 3 - estilos - Universidades*/
+#sub-menu-search3 ul li {
+  height: 66px;
+  border-bottom: 1px solid rgb(144, 144, 144);
+}
+
+#sub-menu-search3 #universidad {
+  background-color: RGB(238, 125, 0);
+  height: 50px;
+}
+
+#sub-menu-search3 #universidad #Item1 {
+  position: absolute;
+  top: 12px;
+}
+#sub-menu-search3 #universidad #Item1 h4 {
+  font-size: 20px;
+}
+
+#sub-menu-search3 #universidad #Item1 #crossicon-univer {
+  position: absolute;
+  left: 205px;
+  top: 3px;
+}
+
+#sub-menu-search3 ul li a p {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+#sub-menu-search3 ul li a p #uni-icon {
+  margin-right: 10px;
+}
+
+#sub-menu-search3 li .mover-universidades {
+  position: relative;
+  top: -25px;
+  left: 30px;
+}
+
+.active5 {
+  background-color: rgb(131, 131, 131);
+  border-left: 5px solid RGB(238, 125, 0);
+}
+
+/*sub-sidebar 4 - estilos - limite internacional*/
+
+#sub-menu-search4 ul li {
+  height: 66px;
+  border-bottom: 1px solid rgb(144, 144, 144);
+}
+
+#sub-menu-search4 #lim-intern {
+  background-color: RGB(64, 191, 239);
+  height: 50px;
+}
+
+#sub-menu-search4 #lim-intern #Item1 {
+  position: absolute;
+  top: 12px;
+}
+#sub-menu-search4 #lim-intern #Item1 h4 {
+  font-size: 20px;
+}
+
+#sub-menu-search4 #lim-intern #Item1 #crossicon-lim {
+  position: absolute;
+  left: 205px;
+  top: 3px;
+}
+
+#sub-menu-search4 ul li a p {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+#sub-menu-search4 ul li a p #lim-icon {
+  margin-right: 10px;
+}
+
+/*sidebar sub-menu-info - estilos*/
+
+.sidebar-search-info {
+  position: absolute;
+  left: -290px;
+  width: 290px;
+  top: 66px;
+  height: 100%;
+  background: #333333;
+  /*transition:all 300ms linear;*/
+  z-index: 1;
+}
+
+.sidebar-search-info.active2 {
+  left: 60px;
+}
+
+#sub-menu-info .help {
+  padding: 0px;
+}
+#sub-menu-info .help h1 {
+  color: rgb(255, 255, 77);
+  padding: 5px 0px 5px 0px;
+}
+
+#sub-menu-info .help p {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  color: white;
+}
+#sub-menu-info .help hr {
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+}
+
+/*Mostrar y quitar unidades militares EA / AA / FFAA*/
+.uni-mil {
+  position: relative;
+  top: 50px;
+  left: 500px;
+  font-size: 50px;
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
+/*sub-menu-lupa*/
+.sidebar-search-lupa {
+  position: absolute;
+  left: -290px;
+  width: 290px;
+  top: 66px;
+  height: 900px;
+  background: #333333;
+  display: none;
+  z-index: 1;
+}
+.sidebar-search-lupa.active3 {
+  left: 60px;
+}
+
+/*Buscador */
+.buscador {
+  position: absolute;
+  padding: 5px;
+}
+
+.buscador input {
+  width: 260px;
+  height: 40px;
+  margin-left: 6px;
+  margin-top: 10px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+}
+
+.buscador .btn {
+  position: absolute;
+  top: 14px;
+  right: 19px;
+  background-color: gray;
+  width: 41px;
+  height: 41px;
+  line-height: 28px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.buscador .btn a i {
+  color: white;
+}
+
+.buscador .text {
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+
+#geosidebar{
+  position: absolute;
+  left:700px;
+}
+/*Esta es la ultima actualizacion*/
+
+/*------Stylos del mapa ---------*/
+#mapa {
+  position: absolute;
+  top: 66px;
+  left: 60px;
+  right: 0px;
+  bottom: 0px;
+  height: 100vh;
+  z-index: 0;
+}
+.leaflet-control-geocoder {
+  border-radius: 0px;
+}
+.leaflet-bar {
+  box-shadow: none;
+  border-radius: 0px;
+}
+.leaflet-control-geocoder-alternatives {
+  font-size: 10px;
+}
+button.leaflet-control-geocoder-icon {
+  width: 100%;
+  border: 0.5px #b3b3b3 solid !important;
+}
+.leaflet-control-geocoder-form-no-error {
+  font-size: 10px;
+}
+
+#detalles{
+    background-color: white;
+}
+
+/* page Responsive*/
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}

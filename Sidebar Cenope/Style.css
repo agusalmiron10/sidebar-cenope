@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+   list-style: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family:  Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color:#fff;
+}
+
+.wrapper .header{
+    z-index: 1;
+    background: #42444b;
+    position: fixed;
+    width: calc(100% - 0%);
+    height: 70px;
+    display: flex;
+    top: 0;
+}
+
+.wrapper .header .header-menu{
+    width: calc(100% - 0%);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.wrapper .header .header-menu .title{
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.wrapper .header .header-menu .title span{
+    color: #4ccee8;
+}
+
+/* botom menu hamburguesa*/
+
+
+.wrapper .header .header-menu .sidebar-btn{
+    color: #fff;
+    position: absolute;
+    margin-left: 240px;
+    font-size: 22px;
+    font-weight:900;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+}
+
+.wrapper .header .header-menu .sidebar-btn:hover{
+    color: #4ccee8;
+}
+
+/*Botones del menu */
+.wrapper .header .header-menu ul{
+    display: flex;
+    margin-top: 15px;
+}
+
+.wrapper .header .header-menu ul li a{
+    background: #fff;
+    color: #000;
+    display: block;
+    margin: 0 10px;
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    transition-property:background, color;
+}
+
+.wrapper .header .header-menu ul li a:hover{
+    background-color: #4ccee8;
+    color: #fff;
+}
+
+
+/*Estilos del sidebar*/
+
+.wrapper .sidebar{
+    z-index: 1;
+    background: #2f323a;
+    position: fixed;
+    top: 70px;
+    width: 250px;
+    height: calc(100% - 9%);
+    transition: 0.3s;
+    transition-property: width;
+    overflow-y: auto;
+}
+
+
+

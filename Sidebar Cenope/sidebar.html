@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar - cenope</title>
+    <!--Favicon-->
+    <link rel="icon" href="img/Escudo_del_Ejército_Argentino.png" />
+    <!--CDN - bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+
+    <!--1-->
+    <!-- 1 Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <!-- Fin Leaflet -->
+
+    <!--2-->
+    <!-- 2 Leaflet Zoom Home -->
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="js/leaflet.zoomhome.min.js" />
+    <script src="js/leaflet.zoomhome.min.js"></script>
+    <!-- Fin Zoom Home -->
+    <!-- Locate Control -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.73.0/dist/L.Control.Locate.min.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.73.0/dist/L.Control.Locate.min.js"
+      charset="utf-8"
+    ></script>
+    <!-- Fin Locate Control s-->
+    <!--3-->
+    <!-- 3 Leaflet.PolylineMeasure -->
+    <link
+      rel="stylesheet"
+      href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css"
+    />
+    <script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
+    <!-- Fin Leaflet.PolylineMeasure -->
+
+    <!--4-->
+    <!-- L.Draw -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script>
+    <!-- Fin L.Draw -->
+
+    <!-- Geocoder -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
+    />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <!-- Fin Geocoder -->
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!--CDN font aweson-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="sidebar.css" />
+  </head>
+  <body>
+    <!--Inicio del navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <img
+          src="img/TACOIN.png"
+          style="width: 50px"
+          alt=""
+        />
+        <a class="navbar-brand" href="#" style="position: absolute; left: 70px"
+          >TACOIN EA</a
+        >
+        <div id="geosidebar"></div>
+        <div class="collapse" id="navbarSupportedContent"></div>
+      </div>
+    </nav>
+    <!--Fin del navbar-->
+
+    <div class="wrapper-sidebar">
+      <nav id="mySidebar" class="sidebar">
+        <ul>
+          <li>
+            <a href="#" id="lupa"
+              ><i class="fas fa-search"></i
+              ><i id="triangle3" class="fas fa-caret-left"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" id="search"
+              ><i class="fas fa-layer-group"></i
+              ><i id="triangle2" class="fas fa-caret-left"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" id="info"
+              ><i class="fas fa-info-circle"></i
+              ><i id="triangle4" class="fas fa-caret-left"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!--Primer sub menu "search"-->
+      <div id="sub-menu-search" class="sidebar-search">
+        <div class="scroll_A">
+          <ul id="subMenuB" >
+            <li id="title-estructura">
+                <h3>Estructura Orgánica</h2>
+            </li>
+            <li id="uni-militares" class="uni-mili">
+              <a href="#">
+                <h4>Unidades militares</h4>
+                <p>
+                  Aquí podrá visualizar las instalaciones militares del Ejército
+                  Argentino, la Armada Argentina y la Fuerza Aérea Argentina .
+                </p>
+              </a>
+            </li>
+            <li id="universidades" class="univers">
+              <a href="#">
+                <h4>Universidades</h4>
+                <p>
+                  Aquí podrá visualizar las universidades públicas y privadas que
+                  están alrededor del país .
+                </p>
+              </a>
+            </li>
+            <li id="limite-arg" class="linea-ferr">
+              <a href="#">
+                <h4>Líneas de ferrocarril</h4>
+                <p>Aquí podrá visualizar las lineas de ferrocarril </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="scroll_B">
+          <ul id="submenu2">
+            <li id="title-conduccion">
+              <h3>Áreas de la Conducción</h3>
+            </li>
+            <li>
+              <a href="#">
+                <h4>Personal</h4>
+                <p>
+                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae quam ad excepturi! Hic veritatis voluptatibus quisquam nulla dolorum. Odit, esse!
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h4>Inteligencia</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h4>Operaciones</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque architecto cupiditate explicabo?
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h4>Material</h4>
+                <p>
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, incidunt?
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h4>Finanzas</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat quisquam et quia sint laborum corporis.
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+         
+      </div>
+      <!--Primer sub menu "search"-->
+
+      <!--Segundo sub menu "search" / Unidades militares-->
+      <div id="sub-menu-search2" class="sidebar-search">
+        <ul id="subMenuB">
+          <li id="uni-mil-title">
+            <a href="#" id="Item1">
+              <h4>
+                Unidades militares<i
+                  class="fas fa-times"
+                  style="padding-left: 45px"
+                  id="crossicon"
+                ></i>
+              </h4>
+            </a>
+          </li>
+          <li id="EA-mil" class="borde prueba" data-fuerza="EA">
+            <a href="#">
+              <img
+                id="logo"
+                src="img/Escudo_del_Ejército_Argentino.png"
+                alt="EA"
+                style="width: 25px"
+              />
+              <p>Ejército Argentino</p>
+            </a>
+          </li>
+          <li id="arm-arg" class="borde prueba" data-fuerza="Armada">
+            <a href="#">
+              <img
+                id="logo"
+                src="img/Escudo_armada_argentina_banderolas.png"
+                alt="EA"
+                style="width: 25px"
+              />
+              <p>Armada Argentina</p>
+            </a>
+          </li>
+          <li id="FFAA" class="borde prueba" data-fuerza="Aerea">
+            <a href="#">
+              <img
+                id="logo"
+                src="img/Logo_Fuerza-Aerea.png"
+                alt="EA"
+                style="width: 32px"
+              />
+              <p>Fuerza Aérea Argentina</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--Segundo sub menu "search" / Unidades militares-->
+
+      <!--tercero sub menu "search" / Universidades-->
+      <div id="sub-menu-search3" class="sidebar-search">
+        <ul id="subMenuB">
+          <li id="universidad">
+            <a href="#" id="Item1">
+              <h4>
+                Universidades<i
+                  class="fas fa-times"
+                  style="padding-left: 45px"
+                  id="crossicon-univer"
+                ></i>
+              </h4>
+            </a>
+          </li>
+          <li
+            id="publica-mil"
+            class="borde pulsar-universidades"
+            data-universidad="publica"
+          >
+            <a href="#">
+              <img
+                src="img/universidad_nac.svg"
+                alt="Universidades Nacionales"
+              />
+              <p class="mover-universidades">Universidades públicas</p>
+            </a>
+          </li>
+          <li
+            id="privada-mil"
+            class="borde pulsar-universidades"
+            data-universidad="privada"
+          >
+            <a href="#">
+              <img
+                src="img/universidad_otras.svg"
+                alt="Universidades Privadas"
+                style="width: 25px"
+              />
+              <p class="mover-universidades">Universidades privadas</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--tercero sub menu "search" / Universidades-->
+
+      <!--cuarto sub menu "search" / limite internacional-->
+      <div id="sub-menu-search4" class="sidebar-search">
+        <ul id="subMenuB">
+          <li id="lim-intern">
+            <a href="#" id="Item1">
+              <h4>
+                Líneas de Ferrocarril<i
+                  class="fas fa-times"
+                  style="padding-left: 45px"
+                  id="crossicon-lim"
+                ></i>
+              </h4>
+            </a>
+          </li>
+          <li id="bt-lim-intern" class="borde">
+            <a href="#">
+              <p>
+                <i id="lim-icon" class="fas fa-map-marked-alt"></i> Visualizar
+                Líneas de Ferrocarril
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--cuarto sub menu "search" / limite internacional-->
+
+      <!--primer sub menu "info" / buscador-->
+      <div id="sub-menu-info" class="sidebar-search-info">
+        <div class="help">
+          <h1 class="text-center"><i class="fas fa-info-circle"></i></h1>
+          <hr />
+          <p class="desktop">
+            Puede acceder a información haciendo
+            <strong>click derecho</strong> sobre el mapa y seleccionando
+            <strong>Más información...</strong> o bien a través del menú que
+            aparece al hacer click sobre los marcadores en el mapa.
+          </p>
+        </div>
+        <div id="detalles"></div>
+      </div>
+      <!--FIN primer sub menu "info" / buscador-->
+
+      <!--primer sub menu "info" / buscador-->
+      <div id="sub-menu-lupa" class="sidebar-search-lupa">
+        <div class="buscador">
+          <div class="text">
+            <p>
+              Aquí puede buscar lugares de interés dentro de la República
+              Argentina o bien restringidos al área que está visualizando en el
+              mapa.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--FIN primer sub menu "info" / buscador-->
+    </div>
+    <!--Fin del wrapper-sidebar-->
+
+    <!--Esta es la ultima actualizacion-->
+
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div id="mapa"></div>
+        <!-- <div id="resultado"></div>
+              <button id="conversion" style="display: none;">Obtener datos</button> -->
+      </div>
+    </div>
+
+    <!--Script-->
+    <!--Bootstrap JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <!--Jquery-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/sidebar.js"></script>
+
+    <!--Script del MAPA-->
+    <script>
+      var map = L.map("mapa", { zoomControl: false }).setView(
+        [-34.609547, -58.3710067],
+        4
+      );
+      L.tileLayer(
+        "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+        {
+          attribution:
+            '<a href="http://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2" target="_blank">Instituto Geográfico Nacional</a>',
+          minZoom: 3,
+          maxZoom: 18,
+        }
+      ).addTo(map);
+
+      //   document
+      //     .getElementById("conversion")
+      //     .addEventListener("click", function () {
+      //       var punto = $("#resultado").html(
+      //         JSON.stringify(drawnItems.toGeoJSON())
+      //       );
+      //     });
+
+      L.control
+        .scale({
+          maxWidth: 240,
+          metric: true,
+          imperial: false,
+          position: "bottomleft",
+        })
+        .addTo(map);
+
+      L.control
+        .polylineMeasure({
+          position: "bottomright",
+          unit: "metres",
+          clearMeasurementsOnStop: false,
+          showClearControl: true,
+          showUnitControl: true,
+        })
+        .addTo(map);
+
+      map.addControl(
+        L.control.locate({
+          locateOptions: {
+            enableHighAccuracy: true,
+          },
+          position: "bottomright",
+        })
+      );
+
+      //ZOOM HOME
+      var zoomHome = L.Control.zoomHome();
+      zoomHome.addTo(map);
+      //Fin ZOOM HOME
+
+      var geocoder = L.Control.Geocoder.nominatim({
+        geocodingQueryParams: { countrycodes: "AR" },
+      });
+
+      var control = L.Control.geocoder({
+        geocoder: geocoder,
+        placeholder: "Buscar",
+        errorMessage: "No se encontro ubicación que coincida con su búsqueda.",
+      });
+
+      document.getElementById("geosidebar").appendChild(control.onAdd(map));
+
+      //Leaflet Draw
+      var drawnItems = new L.FeatureGroup();
+      map.addLayer(drawnItems);
+      var drawControl = new L.Control.Draw({
+        draw: {
+          circle: false,
+        },
+        edit: {
+          featureGroup: drawnItems,
+        },
+      });
+      map.addControl(drawControl);
+
+      map.on("draw:created", function (e) {
+        var type = e.layerType,
+          layer = e.layer;
+        console.log(e);
+
+        if (type === "marker") {
+          layer.bindPopup();
+          layer.getPopup().setContent(layer.getLatLng().toString());
+        }
+        drawnItems.addLayer(layer);
+      });
+
+      //Fin Leaflet Draw
+
+      //WFS
+      var frc_url =
+        "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign:lineas_de_transporte_ferroviario_AN010&outputFormat=application/json";
+
+      var ferrocarril;
+      $("#bt-lim-intern").click(function () {
+        var clicks = $(this).data("clicks");
+        if (!clicks) {
+          $.getJSON(frc_url).then((res) => {
+            ferrocarril = L.geoJSON(res).addTo(map);
+          });
+        } else {
+          map.removeLayer(ferrocarril);
+        }
+        $(this).data("clicks", !clicks);
+      });
+
+      var univ_url =
+        "https://wms.ign.gob.ar/geoserver/infraestructura-social/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=infraestructura-social:puntos_de_ciencia_y_educacion_020602&outputFormat=application/json";
+      var UnivSvg = L.Icon.extend({
+        options: {
+          shadowUrl: null,
+          iconAnchor: new L.Point(12, 12),
+          iconSize: new L.Point(24, 24),
+          iconUrl: "./img/universidad_nac.svg",
+        },
+      });
+      var UnivPSvg = L.Icon.extend({
+        options: {
+          shadowUrl: null,
+          iconAnchor: new L.Point(12, 12),
+          iconSize: new L.Point(24, 24),
+          iconUrl: "./img/universidad_otras.svg",
+        },
+      });
+
+      var infraestructura_social;
+      $("#publica-mil").click(function () {
+        var clicks = $(this).data("clicks");
+        if (!clicks) {
+          $.getJSON(univ_url).then((res) => {
+            infraestructura_social = L.geoJSON(res, {
+              pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, { icon: new UnivSvg() });
+              },
+              onEachFeature: function (feature, layer) {
+                layer.bindPopup(
+                  "<h6>Institucion:</h6> " +
+                    feature.properties.nombre_geografico
+                );
+              },
+              filter: function (feature) {
+                return !feature.properties.nombre_geografico.search(
+                  "Universidad Nacional" || "Universidad Tecnológica Nacional"
+                );
+              },
+            }).addTo(map);
+          });
+        } else {
+          map.removeLayer(infraestructura_social);
+        }
+        $(this).data("clicks", !clicks);
+      });
+
+      var infraestructura_privada;
+      $("#privada-mil").click(function () {
+        var clicks = $(this).data("clicks");
+        if (!clicks) {
+          $.getJSON(univ_url).then((res) => {
+            infraestructura_privada = L.geoJSON(res, {
+              pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, { icon: new UnivPSvg() });
+              },
+              onEachFeature: function (feature, layer) {
+                layer.bindPopup(
+                  "<h6>Institucion:</h6> " +
+                    feature.properties.nombre_geografico
+                );
+              },
+              filter: function (feature) {
+                return feature.properties.nombre_geografico.search(
+                  "Universidad Nacional" || "Universidad Tecnológica Nacional"
+                );
+              },
+            }).addTo(map);
+          });
+        } else {
+          map.removeLayer(infraestructura_privada);
+        }
+        $(this).data("clicks", !clicks);
+      });
+
+      //Fin WFS
+
+      //GeoJSON
+
+      var AereaSvg = L.Icon.extend({
+        options: {
+          shadowUrl: null,
+          iconAnchor: new L.Point(12, 12),
+          iconSize: new L.Point(40, 40),
+          iconUrl: "./img/Logo_Fuerza-Aerea.png",
+        },
+      });
+      var ArmadaSvg = L.Icon.extend({
+        options: {
+          shadowUrl: null,
+          iconAnchor: new L.Point(12, 12),
+          iconSize: new L.Point(40, 40),
+          iconUrl: "./img/Escudo_armada_argentina_banderolas.png",
+        },
+      });
+      var EjercitoSvg = L.Icon.extend({
+        options: {
+          shadowUrl: null,
+          iconAnchor: new L.Point(12, 12),
+          iconSize: new L.Point(40, 40),
+          iconUrl: "./img/Escudo_del_Ejército_Argentino.png",
+        },
+      });
+
+      function masInfo(info) {
+        document.getElementById("detalles").innerHTML =
+          //   "ID: " +
+          //   $(info).data("id") +
+          "Fuerza: " +
+          $(info).data("fuerza") +
+          "<br/>Tipo: " +
+          $(info).data("objeto") +
+          "<br/>Nombre: " +
+          $(info).data("nombre") +
+          "<br/>Fuente: " +
+          $(info).data("fuente");
+      }
+
+      var fuerza_aerea;
+      $("#FFAA").click(function () {
+        var clicks = $(this).data("clicks");
+        if (!clicks) {
+          fetch("./geojson/instalacion_militar.geojson")
+            .then((response) => response.json())
+            .then((data) => {
+              fuerza_aerea = L.geoJSON(data, {
+                pointToLayer: function (feature, latlng) {
+                  return L.marker(latlng, { icon: new AereaSvg() });
+                },
+                onEachFeature: function (feature, layer) {
+                  layer.bindPopup(
+                    '<b style="font-size: 14px;"><img src="./img/Logo_Fuerza-Aerea.png" style="width: 24px; height: 24px"/> ' +
+                      feature.properties.fdc +
+                      "<br><b>Nombre</b>: " +
+                      feature.properties.fna +
+                      "<br><a href=# data-id='" +
+                      feature.properties.gid +
+                      "' data-fuerza='" +
+                      feature.properties.fdc +
+                      "' data-objeto='" +
+                      feature.properties.objeto +
+                      "' data-nombre='" +
+                      feature.properties.fna +
+                      "' data-fuente='" +
+                      feature.properties.sag +
+                      "' onclick='masInfo(this)'>Mas información</a>"
+                  );
+                },
+                filter: function (feature) {
+                  return feature.properties.fdc == "Fuerza Aérea Argentina";
+                },
+              }).addTo(map);
+            });
+        } else {
+          map.removeLayer(fuerza_aerea);
+        }
+        $(this).data("clicks", !clicks);
+      });
+
+      var armada_arg;
+      $("#arm-arg").click(function () {
+        var clicks = $(this).data("clicks");
+        if (!clicks) {
+          fetch("./geojson/instalacion_militar.geojson")
+            .then((response) => response.json())
+            .then((data) => {
+              armada_arg = L.geoJSON(data, {
+                pointToLayer: function (feature, latlng) {
+                  return L.marker(latlng, { icon: new ArmadaSvg() });
+                },
+                onEachFeature: function (feature, layer) {
+                  layer.bindPopup(
+                    '<b style="font-size: 14px;"><img src="./img/Escudo_armada_argentina_banderolas.png" style="width: 24px; height: 24px"/> ' +
+                      feature.properties.fdc +
+                      "<br><b>Nombre</b>: " +
+                      feature.properties.fna +
+                      "<br><a href=# data-id='" +
+                      feature.properties.gid +
+                      "' data-fuerza='" +
+                      feature.properties.fdc +
+                      "' data-objeto='" +
+                      feature.properties.objeto +
+                      "' data-nombre='" +
+                      feature.properties.fna +
+                      "' data-fuente='" +
+                      feature.properties.sag +
+                      "' onclick='masInfo(this)'>Mas información</a>"
+                  );
+                },
+                filter: function (feature) {
+                  return feature.properties.fdc == "Armada Argentina";
+                },
+              }).addTo(map);
+            });
+        } else {
+          map.removeLayer(armada_arg);
+        }
+        $(this).data("clicks", !clicks);
+      });
+
+      var ejercito;
+      $("#EA-mil").click(function () {
+        var clicks = $(this).data("clicks");
+        if (!clicks) {
+          fetch("./geojson/instalacion_militar.geojson")
+            .then((response) => response.json())
+            .then((data) => {
+              ejercito = L.geoJSON(data, {
+                pointToLayer: function (feature, latlng) {
+                  return L.marker(latlng, { icon: new EjercitoSvg() });
+                },
+                onEachFeature: function (feature, layer) {
+                  layer.bindPopup(
+                    '<b style="font-size: 14px;"><img src="./img/Escudo_del_Ejército_Argentino.png" style="width: 24px; height: 24px"/> ' +
+                      feature.properties.fdc +
+                      "<br><b>Nombre</b>: " +
+                      feature.properties.fna +
+                      "<br><a href=# data-id='" +
+                      feature.properties.gid +
+                      "' data-fuerza='" +
+                      feature.properties.fdc +
+                      "' data-objeto='" +
+                      feature.properties.objeto +
+                      "' data-nombre='" +
+                      feature.properties.fna +
+                      "' data-fuente='" +
+                      feature.properties.sag +
+                      "' onclick='masInfo(this)'>Mas información</a>"
+                  );
+                },
+                filter: function (feature) {
+                  return feature.properties.fdc == "Ejército Argentino";
+                },
+              }).addTo(map);
+            });
+        } else {
+          map.removeLayer(ejercito);
+        }
+        $(this).data("clicks", !clicks);
+      });
+      //Fin GeoJSON
+    </script>
+  </body>
+</html>
