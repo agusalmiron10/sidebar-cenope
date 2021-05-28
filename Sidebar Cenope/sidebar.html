@@ -109,7 +109,7 @@
       <nav id="mySidebar" class="sidebar">
         <ul>
           <li>
-            <a href="#" id="lupa"
+            <a href="#" id="lupa-fuera"
               ><i class="fas fa-search"></i
               ><i id="triangle3" class="fas fa-caret-left"></i
             ></a>
@@ -121,7 +121,7 @@
             ></a>
           </li>
           <li>
-            <a href="#" id="info"
+            <a href="#" id="info-fuera"
               ><i class="fas fa-info-circle"></i
               ><i id="triangle4" class="fas fa-caret-left"></i
             ></a>
@@ -131,11 +131,11 @@
 
       <!--Primer sub menu "search"-->
       <div id="sub-menu-search" class="sidebar-search">
+        <div class="title-organic">
+            <h3>Estructura Orgánica</h3>
+        </div>
         <div class="scroll_A">
           <ul id="subMenuB" >
-            <li id="title-estructura">
-                <h3>Estructura Orgánica</h2>
-            </li>
             <li id="uni-militares" class="uni-mili">
               <a href="#">
                 <h4>Unidades militares</h4>
@@ -162,49 +162,34 @@
             </li>
           </ul>
         </div>
+        <div class="title-conduc">
+          <h3>Áreas de la Conducción</h3>
+        </div>
         <div class="scroll_B">
           <ul id="submenu2">
-            <li id="title-conduccion">
-              <h3>Áreas de la Conducción</h3>
-            </li>
-            <li>
+            <li id="personal">
               <a href="#">
                 <h4>Personal</h4>
-                <p>
-                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae quam ad excepturi! Hic veritatis voluptatibus quisquam nulla dolorum. Odit, esse!
-                </p>
               </a>
             </li>
-            <li>
+            <li id="inteligencia">
               <a href="#">
                 <h4>Inteligencia</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
               </a>
             </li>
-            <li>
+            <li id="operaciones">
               <a href="#">
                 <h4>Operaciones</h4>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque architecto cupiditate explicabo?
-                </p>
               </a>
             </li>
-            <li>
+            <li id="material">
               <a href="#">
                 <h4>Material</h4>
-                <p>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, incidunt?
-                </p>
               </a>
             </li>
-            <li>
+            <li id="finanzas">
               <a href="#">
                 <h4>Finanzas</h4>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat quisquam et quia sint laborum corporis.
-                </p>
               </a>
             </li>
           </ul>
@@ -369,13 +354,16 @@
 
     <!--Esta es la ultima actualizacion-->
 
+    <!--Aca esta el mapa-->
     <div id="page-content-wrapper">
-      <div class="container-fluid">
+      <div id="map-cenope" class="container-fluid ">
         <div id="mapa"></div>
         <!-- <div id="resultado"></div>
               <button id="conversion" style="display: none;">Obtener datos</button> -->
       </div>
     </div>
+    <!--Fin del mapa-->
+
 
     <!--Script-->
     <!--Bootstrap JavaScript Bundle with Popper -->

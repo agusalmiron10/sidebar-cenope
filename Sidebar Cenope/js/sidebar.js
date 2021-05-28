@@ -66,6 +66,9 @@ $(document).ready(function () {
         $(".sidebar-search-lupa").removeClass('active3');
 
 
+        //Achicar mapa
+        $("#map-cenope").toggleClass("active-mapa");
+
         $(".sidebar #search i").toggleClass('pulsado'); // pintar y despintar boton
         $("#info i").removeClass('pulsado');
         $("#lupa i").removeClass('pulsado');
